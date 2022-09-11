@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Input Form</title>
+    
+    <style>      
+      .hamburger{
+        width: 30px;
+        height: 5px;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .hamburger-line {
+          width: 95%;
+          height: 5px;
+          margin-left: auto;
+          margin-right: auto;    
+          background: #0d6efd;
+          border-radius: 1rem;
+          position: relative;
+          transition: 0.1s;
+      }
+
+      #hamburger-first-line {
+        margin-bottom: 0.3rem;
+      }
+
+      #hamburger{    
+        line-height: 40px;
+        cursor: pointer;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;        
+      }
+
+      .rotate-right-down {
+        transform: rotate(45deg);
+        top : 33% ;
+      }
+
+      .rotate-right-up {
+        transform: rotate(-45deg);
+        bottom: 0.46rem;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      
+      <div class="hamburger border-0" id="hamburger">
+        <div class="hamburger-line" id="hamburger-first-line"></div>
+        <div class="hamburger-line" id="hamburger-second-line"></div>
+      </div>
+
+    </div>                                                                                    
+
+    <script>
+      document.querySelector('#hamburger').addEventListener('click',() => {
+      document.querySelector('#hamburger-first-line').classList.toggle('rotate-right-down');
+      document.querySelector('#hamburger-second-line').classList.toggle('rotate-right-up');     
+    })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
